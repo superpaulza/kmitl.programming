@@ -1,0 +1,22 @@
+import java.util.Scanner;
+class  WeightControl
+{
+	public static void main(String[] args) 
+	{
+		double y = 10;
+		Scanner input = new Scanner(System.in);
+		double now,reduce,total = 0;
+		System.out.print("Hello World!");
+		double weight = input.nextDouble();
+		System.out.println("month weight % reduce now total_reduce");
+		for (int month = 1; month <= 8;month++)
+		{
+			reduce = weight*(11-month/100);
+		    now = weight - reduce;
+			total = total + reduce;
+			System.out.printf("%d %.1f %.0f %.3f %.3f %.3f\n",month,weight,y,reduce,now,total);
+			weight = now;
+			y--;
+		}
+	}
+}

@@ -1,0 +1,45 @@
+import java.util.Scanner;
+class Lottery 
+{
+	static int count = 0;
+	static Scanner input = new Scanner(System.in);
+	public static void main(String[] args) 
+	{
+		int [] lotto = new int[100];
+		int r = random(00,99);
+		System.out.println(r);
+		GetData(lotto);
+		int c = check(lotto,r);
+		double per = (double) c/count;
+		System.out.println("Random No. ==> " + r + " true " +  c + " count " + count + " percent " + per);
+	}
+
+	public static void GetData(int []lotto) {
+		System.out.println("Please Enter 2-digits Number\nWARNING!! If Press -1 or Enter more than 2-digits program will termination!!");
+		for (int i = 0; i < lotto.length; i++)
+		{
+			int a = input.nextInt();
+			if (a == -1 || a > 99) return;
+			else {
+				lotto[i] = a;
+				count++;
+			}
+		}
+	}
+
+	public static int random(int min, int max) {
+		System.out.println("random!!");
+		//Random 00-99 Numbers
+		int a = (int) (Math.random() * ((max - min) + 1)) + min;
+		return a;
+	}
+	
+	public static int check(int [] lotto, int r) {
+		int a = 0;
+		for (int i = 0; i < lotto.length ; i++ )
+		{
+			if (lotto[i] == r) a += 1;
+		}
+		return a;
+	}
+}

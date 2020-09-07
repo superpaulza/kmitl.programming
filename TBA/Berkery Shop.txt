@@ -1,0 +1,13 @@
+Jan Apr May Jul Discount 15 percent
+Feb Mar Dec Aug Discount 20 percent
+Other month discount 5 percent
+
+Write program input buying information (รับข้อมูลการซื้อ)
+เดือน 5
+ชิ้น 1 40
+ชิ้น 2 50
+ชิ้น 3 28
+ชิ้น 4 -1
+ยอดเงิน 118
+ลด xx บาท
+ต้องจ่าย 118-xx

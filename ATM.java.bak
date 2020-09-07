@@ -1,0 +1,18 @@
+import java.util.*;
+class ATM
+{
+	public static void main(String[] args) 
+	{
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter Money ==> ");
+		int money = input.nextInt();
+		int b1000 = 0 ,b500 = 0 ,b100 = 0 ,s = 0;
+			b1000 = money/1000;
+			s = money%1000;
+			b500 = s/500;
+			s = s%500;
+			b100 = s/100;
+			s = s%100;
+		System.out.println("B1000 ==> " + b1000 + "\n" + "B500 ==> " + b500 + "\n" + "B100 ==> "  + b100 + "\n");
+	}
+}
